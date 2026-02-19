@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Auto Bruno - Noleggio e Vendita</title>
 <meta name="robots" content="noindex, nofollow">
-
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&display=swap" rel="stylesheet">
 <style>
 
 * {
@@ -75,11 +75,29 @@ body {
 }
 
 .services {
-  margin-bottom: 25px;
-  font-size: 1.1rem;
+  margin-bottom: 35px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.3rem;
   font-weight: 600;
-  color: #e11d48;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ff3b3b, #e11d48);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+
+.services::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #e11d48, transparent);
 }
 
 h1 {
