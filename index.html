@@ -21,7 +21,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
   position: relative;
   text-align: center;
 }
@@ -34,6 +34,18 @@ body {
   width: 100%;
   overflow: hidden;
   opacity: 0.12;
+}
+  @media (max-width: 768px) {
+
+  .road {
+    bottom: 120px; /* le alziamo */
+    opacity: 0.15;
+  }
+
+  .cars svg {
+    width: 80px; /* leggermente più piccole */
+  }
+
 }
 
 .car-track {
