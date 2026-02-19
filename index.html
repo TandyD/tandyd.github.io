@@ -1,113 +1,167 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <title>Auto Bruno - Sito in manutenzione</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto Bruno - Noleggio e Vendita Auto</title>
+<meta name="robots" content="noindex, nofollow">
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<style>
 
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: radial-gradient(circle at center, #1e293b 0%, #0f172a 70%);
-      color: #ffffff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-      padding: 20px;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    .container {
-      max-width: 550px;
-    }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
 
-    .logo-wrapper {
-      position: relative;
-      margin-bottom: 40px;
-    }
+/* AUTO IN MOVIMENTO */
 
-    .logo-wrapper::after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: -10px;
-      width: 180px;
-      height: 20px;
-      background: radial-gradient(circle, rgba(225,29,72,0.6) 0%, transparent 70%);
-      filter: blur(10px);
-    }
+.background-cars {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 200px;
+  background-image: url('https://www.svgrepo.com/show/312146/car.svg');
+  background-repeat: repeat-x;
+  background-size: 120px;
+  opacity: 0.05;
+  animation: moveCars 40s linear infinite;
+}
 
-    .logo {
-      width: 320px;
-      max-width: 100%;
-    }
+@keyframes moveCars {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 
-    h1 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      letter-spacing: 1px;
-    }
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 20px;
+}
 
-    p {
-      font-size: 1rem;
-      opacity: 0.85;
-      line-height: 1.6;
-    }
+.logo-wrapper {
+  position: relative;
+  margin-bottom: 40px;
+}
 
-    .contact {
-      margin-top: 30px;
-      font-size: 1rem;
-    }
+.logo-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -12px;
+  width: 200px;
+  height: 25px;
+  background: radial-gradient(circle, rgba(225,29,72,0.6) 0%, transparent 70%);
+  filter: blur(12px);
+}
 
-    .contact a {
-      color: #e11d48;
-      text-decoration: none;
-      font-weight: 600;
-    }
+.logo {
+  width: 350px;
+  max-width: 100%;
+}
 
-    .contact a:hover {
-      text-decoration: underline;
-    }
+.services {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #e11d48;
+}
 
-    footer {
-      margin-top: 40px;
-      font-size: 0.8rem;
-      opacity: 0.5;
-    }
-  </style>
+h1 {
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+.contact {
+  margin-top: 35px;
+  font-size: 1.05rem;
+}
+
+.contact a {
+  color: #e11d48;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: 50px;
+  font-size: 0.85rem;
+  opacity: 0.5;
+}
+
+@media (max-width: 600px) {
+  .services {
+    font-size: 0.95rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+
+</style>
 </head>
+
 <body>
 
-  <div class="container">
+<div class="background-cars"></div>
 
-    <div class="logo-wrapper">
-      <img src="logo.png" alt="Auto Bruno Servizi Auto" class="logo">
-    </div>
+<div class="container">
 
-    <h1>Sito in manutenzione</h1>
-
-    <p>
-      Stiamo aggiornando il nostro sito per offrirti un servizio migliore.<br>
-      Per informazioni o urgenze puoi contattarci via email.
-    </p>
-
-    <div class="contact">
-      📩 <a href="mailto:info@autobruno.it">info@autobruno.it</a>
-    </div>
-
-    <footer>
-      © 2026 Auto Bruno - Servizi Auto
-    </footer>
-
+  <div class="logo-wrapper">
+    <img src="logo.png" alt="Auto Bruno" class="logo">
   </div>
+
+  <div class="services">
+    NOLEGGIO E VENDITA – AUTO E VEICOLI COMMERCIALI – NUOVI ED USATI
+  </div>
+
+  <h1>Sito in manutenzione</h1>
+
+  <p>
+    Stiamo lavorando al nuovo sito per offrirti un’esperienza migliore.
+    Per informazioni, disponibilità o preventivi puoi contattarci direttamente.
+  </p>
+
+  <div class="contact">
+    📩 <a href="mailto:info@autobruno.it">info@autobruno.it</a>
+  </div>
+
+  <footer>
+    © 2026 Auto Bruno
+  </footer>
+
+</div>
 
 </body>
 </html>
