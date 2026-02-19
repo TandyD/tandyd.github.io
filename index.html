@@ -35,7 +35,18 @@ body {
   overflow: hidden;
   opacity: 0.12;
 } 
+@media (max-width: 768px) {
 
+  .road {
+    bottom: 120px; /* le alziamo */
+    opacity: 0.15;
+  }
+
+  .cars svg {
+    width: 80px; /* leggermente più piccole */
+  }
+
+}
 .car-track {
   display: flex;
   width: max-content;
